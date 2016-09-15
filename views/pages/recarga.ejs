@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RECARGA</title>
+    <link rel="stylesheet" href="/css/recarga_style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="alert" style="text-align: center; margin-top: 15%; font-size: 200%">
+      <p>Seleccione la compañía</p>
+    </div>
+    <form class="" action="/recarga" method="post">
+      <label> <input type="radio" name="fb" value="movistar" /> <img src="/img/movistar.jpg"> </label>
+      <label> <input type="radio" checked name="fb" value="telcel" /> <img src="/img/telcel_logo.png"> </label>
+      <label> <input type="radio" name="fb" value="iusacell" /> <img src="/img/iusacell.jpg"> </label>
+      <br>
+      <a href="#Monto"><button style="float:right; margin-right: 5%;"type="button" class="btn btn-primary btn-lg btn-success" >Continuar</button></a>
+
+      <section id ='Monto' style="margin-top:100%; padding-bottom: 100%;">
+        <div class="alert" style="text-align: center; margin-top: 15%; font-size: 200%">
+          <p>Seleccione el monto</p>
+        </div>
+        <ul class="donate-now" style="margin-top:20%; margin-left:30%">
+          <li>
+            <input type="radio" id="a25" name="amount" value="25"/>
+            <label for="a25">$20</label>
+          </li>
+          <li>
+            <input type="radio" id="a50" name="amount" value="50"/>
+            <label for="a50">$50</label>
+          </li>
+          <li>
+            <input type="radio" id="a75" name="amount" checked="checked" value="100"/>
+            <label for="a75">$100</label>
+          </li>
+          <li>
+            <input type="radio" id="a100" name="amount" value="200"/>
+            <label for="a100">$200</label>
+          </li>
+        </ul>
+        <br>
+        <a href="#">        <button style="float:left; margin-left: 5%;"type="button" class="btn btn-primary btn-lg btn-success" >Atras</button></a>
+        <a href="#telefono"><button style="float:right; margin-right: 5%;"type="button" class="btn btn-primary btn-lg btn-success" >Continuar</button></a>
+      </section>
+      <section id = 'telefono' style="margin-top:100%; padding-bottom: 100%;">
+        <div style="padding-top:10%; padding-left: 15%; padding-right:15%; text-align:center;">
+            <p>Número telefónico</p>
+            <input  pattern=".{10,}" class="form-control" onkeyup="this.value=this.value.replace(/[^\d]/,'')" id="inputPhone" maxlength= "10" name="phone" required="required" size="3" type="tel">
+            <br>
+            <a href="#Monto"> <button style="float:left; margin-left: 5%;"type="button" class="btn btn-primary btn-lg btn-success" >Atras</button></a>
+            <input style="float:right; margin-right: 5%;"type="submit" class="btn btn-primary btn-lg btn-success" >
+        </div>
+      </section>
+    </form>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>
