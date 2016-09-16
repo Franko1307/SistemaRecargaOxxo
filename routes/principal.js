@@ -22,7 +22,6 @@ module.exports = function (app, passport) {
       res.render('pages/recarga')
     });
     app.post('/recarga', login_required, function(req, res){
-      console.log('hola');
       res.render('pages/respuesta', {message: "La recarga de " + req.body.amount + " al número " + req.body.phone + " de la compañía " + req.body.fb + " se ha realizado correctamente"} )
     });
 }
